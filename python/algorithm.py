@@ -1,3 +1,4 @@
+
 '''
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 
@@ -13,10 +14,25 @@ return [0, 1].
 '''
 
 class Solution:
+    def __init__(self):
+        pass # function bady cannot be empty!
+
     def twoSum(self, nums, target):
         """
         :type nums: List[int]
         :type target: int
         :rtype: List[int]
         """
-        
+        # print("Hello World!")
+        myDict = {}
+        for i in range(len(nums)):
+            v = target - nums[i]
+            if v in myDict:
+                return [myDict[v], i]
+            else:
+                myDict[nums[i]] = i
+        return []
+
+
+
+
