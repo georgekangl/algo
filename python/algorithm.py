@@ -59,4 +59,25 @@ class Solution:
 
         return dummy.next
 
+    """
+    using set
+    """
+    def lengthOfLongestSubstring(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        mySet = set() #set, set() to create an empty set, {} to create an empty dict
+        left, right, res = 0, 0, 0 # not like left = 0, right = 0, res = 0
+        while right < len(s):
+            if s[right] not in mySet:
+                mySet.add(s[right])
+                right += 1
+            else:
+                res = max(res, right - left)
+                mySet.remove(s[left])
+                left += 1
+
+        res = max(res, right - left)
+        return res
 

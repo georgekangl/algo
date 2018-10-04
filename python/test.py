@@ -32,10 +32,20 @@ def main():
     # print(res)
 
     # add two number test case
-    l1 = createLinkList([1,2,3])
-    l2 = createLinkList([5,6,7,8])
-    res = solu.addTwoNumbers(l1, l2)
-    printLinkList(res)
+    # l1 = createLinkList([1,2,3])
+    # l2 = createLinkList([5,6,7,8])
+    # res = solu.addTwoNumbers(l1, l2)
+    # printLinkList(res)
+
+    # longest substring without repeating characters
+    s1 = "abcabcbb"
+    s2 = "bbbbb"
+    s3 = "pwwkew"
+    print(solu.lengthOfLongestSubstring(" "))
+    print(solu.lengthOfLongestSubstring(s1))
+    print(solu.lengthOfLongestSubstring(s2))
+    print(solu.lengthOfLongestSubstring(s3))
+
 
 main()
 
