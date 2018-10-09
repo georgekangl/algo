@@ -38,13 +38,21 @@ def main():
     # printLinkList(res)
 
     # longest substring without repeating characters
-    s1 = "abcabcbb"
-    s2 = "bbbbb"
-    s3 = "pwwkew"
-    print(solu.lengthOfLongestSubstring(" "))
-    print(solu.lengthOfLongestSubstring(s1))
-    print(solu.lengthOfLongestSubstring(s2))
-    print(solu.lengthOfLongestSubstring(s3))
+    # s1 = "abcabcbb"
+    # s2 = "bbbbb"
+    # s3 = "pwwkew"
+    # print(solu.lengthOfLongestSubstring(" "))
+    # print(solu.lengthOfLongestSubstring(s1))
+    # print(solu.lengthOfLongestSubstring(s2))
+    # print(solu.lengthOfLongestSubstring(s3))
+
+    # 5. Longest Palindromic Substring
+    s1 = "babad"
+    s2 = "cbbd"
+    s3 = ""
+    print(solu.longestPalindrome(s1))
+    print(solu.longestPalindrome(s2))
+    print(solu.longestPalindrome(s3))
 
 
 main()

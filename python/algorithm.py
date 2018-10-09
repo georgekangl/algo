@@ -81,3 +81,45 @@ class Solution:
         res = max(res, right - left)
         return res
 
+    def getPalindromeOdd(self, s, center):
+        left = center - 1
+        right = center + 1
+        while (left >= 0 and right < len(s) and s[left] == s[right]):
+            left -= 1
+            right += 1
+
+        # print(type(left), type(right))
+        return s[left + 1 : right] # using [:] to get substring, not [,]
+
+    def getPalindromeEven(self, s, center):
+        left = center
+        right = center + 1
+        while (left >= 0 and right < len(s) and s[left] == s[right]):
+            left -= 1
+            right += 1
+        return s[left + 1 : right]
+
+    def longestPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        maxLen = 0
+        res = ""
+        for i in range(len(s)):
+            oddPalin = self.getPalindromeOdd(s, i) # call member function as an instance
+            evenPalin = self.getPalindromeEven(s, i)
+            # print(oddPalin, evenPalin)
+        
+            if len(oddPalin) > len(evenPalin):
+                if len(oddPalin) > maxLen:
+                    maxLen = len(oddPalin)
+                    res = oddPalin 
+            else:
+                if len(evenPalin) > maxLen:
+                    maxLen = len(evenPalin)
+                    res = evenPalin
+
+        return res
+
+
