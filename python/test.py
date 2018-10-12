@@ -55,10 +55,17 @@ def main():
     # print(solu.longestPalindrome(s3))
 
     # 6. ZigZag Conversion
-    s = "PAYPALISHIRING"
-    numRows = 2
+    # s = "PAYPALISHIRING"
+    # numRows = 2
+    # print(solu.convert(s, numRows))
 
-    print(solu.convert(s, numRows))
+    # 7. Reverse Integer
+    print(solu.reverse(123))
+    print(solu.reverse(-123))
+    print(solu.reverse(120))
+    print(solu.reverse(0))
+    print(solu.reverse(2**32))
+
 
 main()
 

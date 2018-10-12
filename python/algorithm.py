@@ -152,6 +152,28 @@ class Solution:
 
         return res
 
+    def reverse(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
+        sign = 1 if x > 0 else -1
+        x = abs(x)
+        nums = []
+        while x > 0 :
+            nums.append(x % 10)
+            x = x // 10
+
+        res = 0
+        for n in nums: 
+            res = res * 10 + n
+            
+        res = res * sign
+        if (res > 2**31 - 1 or res < -2**31):
+            return 0
+
+        return res
+
 
 
         
