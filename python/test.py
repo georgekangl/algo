@@ -47,13 +47,18 @@ def main():
     # print(solu.lengthOfLongestSubstring(s3))
 
     # 5. Longest Palindromic Substring
-    s1 = "babad"
-    s2 = "cbbd"
-    s3 = ""
-    print(solu.longestPalindrome(s1))
-    print(solu.longestPalindrome(s2))
-    print(solu.longestPalindrome(s3))
+    # s1 = "babad"
+    # s2 = "cbbd"
+    # s3 = ""
+    # print(solu.longestPalindrome(s1))
+    # print(solu.longestPalindrome(s2))
+    # print(solu.longestPalindrome(s3))
 
+    # 6. ZigZag Conversion
+    s = "PAYPALISHIRING"
+    numRows = 2
+
+    print(solu.convert(s, numRows))
 
 main()
 

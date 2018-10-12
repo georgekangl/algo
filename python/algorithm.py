@@ -111,15 +111,48 @@ class Solution:
             evenPalin = self.getPalindromeEven(s, i)
             # print(oddPalin, evenPalin)
         
-            if len(oddPalin) > len(evenPalin):
-                if len(oddPalin) > maxLen:
+            if len(oddPalin) >= len(evenPalin):
+                if len(oddPalin) >= maxLen:
                     maxLen = len(oddPalin)
                     res = oddPalin 
             else:
-                if len(evenPalin) > maxLen:
+                if len(evenPalin) >= maxLen:
                     maxLen = len(evenPalin)
                     res = evenPalin
 
         return res
 
+    def convert(self, s, numRows):
+        """
+        :type s: str
+        :type numRows: int
+        :rtype: str
+        """
+        if (numRows <= 1):
+            return s
+        # chars = [[]] * numRows # this puts the same list in all numRows places
+        chars = [[] for _ in range(numRows)]
+        charIndex = -1
+        increase = 1
+        res = ""
+        for i in range(len(s)):
+            # print(chars)
+            charIndex += increase
+            # print(charIndex, chars[charIndex])
+            chars[charIndex].append(s[i])
+            # print(charIndex, chars[charIndex])
+            if charIndex == 0:
+                increase = 1
+            if charIndex == numRows - 1:
+                increase = -1
+        
+        for l in chars:
+            for c in l:
+                res += c
+
+        return res
+
+
+
+        
 
