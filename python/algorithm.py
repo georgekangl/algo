@@ -174,6 +174,55 @@ class Solution:
 
         return res
 
+    def preProcess(sefl, str):
+        if str == "":
+            return ""
+        i = 0
+        res = ""
+        while (i < len(str) and str[i] == ' '):
+            i += 1
+        if i >= len(str):
+            return res
+        if str[i] == '-' or str[i] == '+':
+            res += str[i]
+            i += 1
+        while i < len(str) and str[i].isdigit():
+            res += str[i]
+            i += 1
+        return res
+
+
+    def myAtoi(self, str):
+        """
+        :type str: str
+        :rtype: int
+        """
+        str = self.preProcess(str)
+        # print("!!!    " + str)
+        if str == "":
+            return 0
+        sign = -1 if str[0] == '-' else 1
+        # i = 0
+        if str[0] == '-' or str[0] == '+':
+            str = str[1:]
+        if str == "":
+            return 0
+        # res = 0
+        # for i in range(len(str)):
+        #     res = res * 10 + ord(str[i])
+        #     i += 1
+        # res = res * sign
+
+        res = int(str) * sign
+        if res > 2**31 - 1:
+            return 2**31 - 1
+        if res < -2**31:
+            return -2**31
+
+        return res
+
+                
+
 
 
         

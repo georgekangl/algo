@@ -60,11 +60,28 @@ def main():
     # print(solu.convert(s, numRows))
 
     # 7. Reverse Integer
-    print(solu.reverse(123))
-    print(solu.reverse(-123))
-    print(solu.reverse(120))
-    print(solu.reverse(0))
-    print(solu.reverse(2**32))
+    # print(solu.reverse(123))
+    # print(solu.reverse(-123))
+    # print(solu.reverse(120))
+    # print(solu.reverse(0))
+    # print(solu.reverse(2**32))
+
+    # 8. String to Integer (atoi)
+    print(solu.myAtoi("123"))
+    print(solu.myAtoi("-123"))
+    print(solu.myAtoi("            -123"))
+    print(solu.myAtoi("         +123"))
+    print(solu.myAtoi("  123adafds"))
+    print(solu.myAtoi("12adfasdfa3"))
+    print(solu.myAtoi("adfasdfa123"))
+    print(solu.myAtoi("-adfa123"))
+    print(solu.myAtoi("--123"))
+    print(solu.myAtoi(""))
+    print(solu.myAtoi("   "))
+    print(solu.myAtoi("++++"))
+    print(solu.myAtoi("12399999999999999999"))
+    print(solu.myAtoi("-12999999999999993"))
+
 
 
 main()
